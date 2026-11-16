@@ -1,0 +1,41 @@
+
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Tech Innovation Summit",
+      "description": "A campus event exploring technology and innovation.",
+      "category": "Technology",
+      "date": "2026-12-10",
+      "venue": "Main Campus Hall",
+      "organizer": "Computer Science Club"
+    },
+    {
+      "id": "2",
+      "title": "Cultural Day",
+      "description": "A celebration of different cultures through music, food and dance.",
+      "category": "Culture",
+      "date": "2026-12-15",
+      "venue": "University Grounds",
+      "organizer": "Student Affairs"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "1",
+      "name": "Coding Club",
+      "category": "Technology",
+      "description": "A community for students interested in programming.",
+      "meetingDay": "Friday",
+      "location": "Computer Lab"
+    },
+    {
+      "id": "2",
+      "name": "Photography Club",
+      "category": "Arts",
+      "description": "A club for students who enjoy photography and visual storytelling.",
+      "meetingDay": "Wednesday",
+      "location": "Creative Arts Room"
+    }
+  ]
+}

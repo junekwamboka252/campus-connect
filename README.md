@@ -1,36 +1,75 @@
-# campus-connect
-A student community platform for discovering campus events, clubs and activities.
-
 # Campus Connect
 
-Campus Connect is a student community platform designed to help university and college students discover campus events, join clubs, and stay updated on activities happening around their campuses.
+## About the Project
 
-## Problem Statement
+Campus Connect is a student community platform designed to help university students discover campus events, clubs, and activities in one place.
 
-Students often miss important campus events and opportunities because information is scattered across WhatsApp groups, posters, social media, and noticeboards.
+It aims to solve the problem of scattered campus information shared through WhatsApp groups, posters, social media, and noticeboards.
 
-Campus Connect aims to bring this information together in one accessible platform.
+## Features
 
-## Planned Features
-
-- View available campus events.
+- Browse upcoming campus events.
 - Search and filter events by category.
-- View individual event details.
-- Create new campus events.
-- Edit and delete events.
-- Browse available campus clubs.
-- View individual club details.
+- View detailed event information.
+- Create, edit, and delete events.
+- Browse campus clubs and communities.
+- View club details.
 
-## Technologies
+## Technologies Used
 
 - React
-- React Router
 - JavaScript
+- React Router DOM
 - JSON Server
 - Fetch API
-- Jest and React Testing Library
 - CSS
+- Jest and React Testing Library
+
+## Getting Started
+
+### 1. Clone the repository
+
+git clone https://github.com/junekwamboka252/campus-connect.git
+cd campus-connect
+
+### 2. Install dependencies
+
+npm install
+
+### 3. Start the React application
+
+npm run dev
+
+### 4. Start the JSON Server
+
+Open a second terminal in the project folder and run:
+
+npm run server
+
+### API Endpoints
+
+- Events: http://localhost:5000/events
+- Clubs: http://localhost:5000/clubs
+
+## Project Routes
+
+| Route | Description |
+|---|---|
+| / | Home |
+| /events | Events catalogue |
+| /events/:id | Event details |
+| /create-event | Create an event |
+| /clubs | Clubs catalogue |
+| /clubs/:id | Club details |
+
+## Collaboration Guidelines
+
+- Each team member should work on their assigned feature branch.
+- Do not push directly to the main branch.
+- Create a Pull Request when your work is ready.
+- Ask a teammate to review your code before merging.
+- Pull the latest changes from main before starting new work.
 
 ## Project Status
 
-Currently in development.
+Currently in development as a collaborative React project.
