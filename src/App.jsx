@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 import Home from './pages/Home'
 import Events from './pages/Events'
@@ -21,6 +22,8 @@ function App() {
         <Route path="/clubs" element={<Clubs />} />
         <Route path="/clubs/:id" element={<ClubDetails />} />
       </Routes>
+
+      <Footer />
     </>
   )
 }
