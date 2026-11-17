@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 
 function Home() {
   return (
@@ -11,9 +13,9 @@ function Home() {
         </p>
 
         <div>
-          <button>Explore Events</button>
-          <button>Discover Clubs</button>
-        </div>
+  <Link to="/events">Explore Events</Link>
+  <Link to="/clubs">Discover Clubs</Link>
+</div>
       </section>
      
       <section>
@@ -44,7 +46,7 @@ function Home() {
           what's happening on campus.
         </p>
 
-        <button>Create an Event</button>
+        <Link to="/create-event">Create an Event</Link>
       </section>
     </main>
   )
