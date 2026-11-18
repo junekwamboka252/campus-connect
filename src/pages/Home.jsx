@@ -1,8 +1,44 @@
 
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import EventCard from '../components/EventCard'
+import ClubCard from '../components/ClubCard'
 import './Home.css'
+import './Events.css'
+import './Clubs.css'
 
 function Home() {
+  const [events, setEvents] = useState([])
+  const [clubs, setClubs] = useState([])
+  const [eventsLoading, setEventsLoading] = useState(true)
+  const [clubsLoading, setClubsLoading] = useState(true)
+  const [eventsError, setEventsError] = useState('')
+  const [clubsError, setClubsError] = useState('')
+
+  useEffect(() => {
+    fetch('http://localhost:5000/events')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to load events')
+        }
+        return response.json()
+      })
+      .then((data) => setEvents(data))
+      .catch((error) => setEventsError(error.message))
+      .finally(() => setEventsLoading(false))
+
+    fetch('http://localhost:5000/clubs')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to load clubs')
+        }
+        return response.json()
+      })
+      .then((data) => setClubs(data))
+      .catch((error) => setClubsError(error.message))
+      .finally(() => setClubsLoading(false))
+  }, [])
+
   return (
     <main className="home">
 
@@ -40,8 +76,21 @@ function Home() {
           <p>Discover what's happening around your campus.</p>
         </div>
 
-        <div className="events-placeholder">
-          <p>Exciting campus events will appear here.</p>
+        {eventsLoading ? (
+          <p className="status">Loading events...</p>
+        ) : eventsError ? (
+          <p className="status error">{eventsError}</p>
+        ) : events.length === 0 ? (
+          <p className="status">No events available yet.</p>
+        ) : (
+          <div className="home-cards-grid">
+            {events.slice(0, 3).map((event) => (
+              <EventCard key={event.id} event={event} />
+            ))}
+          </div>
+        )}
+
+        <div className="home-explore-link">
           <Link to="/events">Explore all events →</Link>
         </div>
       </section>
@@ -53,8 +102,21 @@ function Home() {
           <p>Find communities that match your interests.</p>
         </div>
 
-        <div className="clubs-placeholder">
-          <p>Discover student clubs and communities here.</p>
+        {clubsLoading ? (
+          <p className="status">Loading clubs...</p>
+        ) : clubsError ? (
+          <p className="status error">{clubsError}</p>
+        ) : clubs.length === 0 ? (
+          <p className="status">No clubs available yet.</p>
+        ) : (
+          <div className="home-cards-grid">
+            {clubs.slice(0, 3).map((club) => (
+              <ClubCard key={club.id} club={club} />
+            ))}
+          </div>
+        )}
+
+        <div className="home-explore-link">
           <Link to="/clubs">Explore all clubs →</Link>
         </div>
       </section>

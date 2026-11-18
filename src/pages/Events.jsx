@@ -4,7 +4,7 @@ import SearchBar from "../components/SearchBar";
 import CategoryFilter from "../components/CategoryFilter";
 import "./Events.css";
 
-const API_URL = "http://localhost:3000/events";
+const API_URL = "http://localhost:5000/events";
 
 export default function Events() {
   const [events, setEvents] = useState([]);
