@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+/* Clubs Catalogue */
+.clubs-page {
+  padding: 40px 30px;
+  background: #F8FAFC;
+  color: #172554;
+  min-height: 100vh;
+}
+
+.clubs-page > h1 {
+  margin-bottom: 12px;
+  color: #172554;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+}
+
+.clubs-page > p {
+  color: #475569;
+  margin-bottom: 35px;
+  font-family: 'Inter', sans-serif;
+}
+
+.clubs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  text-align: left;
+}
+
+/* Individual Club Card */
+.club-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(23, 37, 84, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.club-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(23, 37, 84, 0.12);
+}
+
+.club-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.club-category {
+  display: inline-block;
+  width: fit-content;
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: #0F766E;
+  background: #CCFBF1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.club-card h2 {
+  margin: 0;
+  color: #172554;
+  font-family: 'Manrope', sans-serif;
+}
+
+.club-card p {
+  color: #475569;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+
+.club-info {
+  border-top: 1px solid #E2E8F0;
+  padding-top: 12px;
+}
+
+.club-details-link {
+  display: inline-block;
+  width: fit-content;
+  color: #FFFFFF;
+  background: #2563EB;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.club-details-link:hover {
+  background: #1D4ED8;
+}
+
+/* Club Details Page */
+.club-details {
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 35px;
+  background: #FFFFFF;
+  color: #172554;
+  text-align: left;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(23, 37, 84, 0.06);
+}
+
+.club-details h1 {
+  margin-top: 0;
+  color: #172554;
+  font-family: 'Manrope', sans-serif;
+}
+
+.club-details p {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  color: #475569;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .clubs-page {
+    padding: 25px 15px;
+  }
+
+  .clubs-container {
+    grid-template-columns: 1fr;
+  }
+
+  .club-details {
+    margin: 25px 15px;
+    padding: 22px;
+  }
+}
