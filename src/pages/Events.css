@@ -1,0 +1,23 @@
+.events-page { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+.events-page h1 { text-align: center; margin-bottom: 1.25rem; }
+.filters { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.search-bar { width: 100%; max-width: 500px; box-sizing: border-box; padding: 0.75rem 1rem; font-size: 1rem; border: 1px solid #cbd5e1; border-radius: 10px; outline: none; background: #fff; }
+.search-bar:focus { border-color: #2f5bea; box-shadow: 0 0 0 3px rgba(47, 91, 234, 0.2); }
+.category-filter { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+.category-filter button { padding: 0.45rem 1.1rem; border: 1px solid #cbd5e1; background: #fff; color: #334155; border-radius: 999px; cursor: pointer; }
+.category-filter button:hover { background: #eef2ff; }
+.category-filter button.active { background: #2f5bea; border-color: #2f5bea; color: #fff; }
+.count { text-align: center; color: #64748b; margin: 0.5rem 0 1rem; }
+.events-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
+.event-card { width: 300px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: transform 0.15s, box-shadow 0.15s; }
+.event-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+.event-card img { width: 100%; height: 150px; object-fit: cover; }
+.event-card-body { padding: 1rem; text-align: center; }
+.event-card h3 { margin: 0.6rem 0 0.4rem; color: #0f172a; }
+.event-card p { margin: 0.2rem 0; color: #475569; font-size: 0.95rem; }
+.event-card .badge { background: #eef2ff; color: #2f5bea; padding: 0.2rem 0.65rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+.event-card a { display: inline-block; margin-top: 0.75rem; color: #2f5bea; font-weight: 600; text-decoration: none; }
+.event-card a:hover { text-decoration: underline; }
+.status { text-align: center; padding: 2rem; color: #475569; }
+.status.error { color: #c0392b; }
+@media (max-width: 600px) { .events-page { padding: 1rem; } .event-card { width: 100%; } }
