@@ -1,0 +1,59 @@
+.ed-card {
+  max-width: 640px;
+  margin: 32px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.ed-title { color: #172554; margin: 0; font-size: 32px; }
+.ed-meta { color: #475569; margin: 0; }
+.ed-description { color: #1e293b; line-height: 1.6; }
+.ed-back { color: #2563eb; text-decoration: none; font-size: 15px; }
+
+.ed-badge {
+  align-self: flex-start;
+  background: #ccfbf1;
+  color: #172554;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ed-card input,
+.ed-card textarea {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.ed-card input:focus,
+.ed-card textarea:focus {
+  outline: 2px solid #2563eb;
+}
+
+.ed-actions { display: flex; gap: 12px; margin-top: 8px; }
+
+.ed-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ed-btn-primary { background: #2563eb; color: #ffffff; }
+.ed-btn-primary:hover { background: #1d4ed8; }
+.ed-btn-secondary { background: #e2e8f0; color: #172554; }
+.ed-btn-danger { background: #dc2626; color: #ffffff; }
+.ed-btn-danger:hover { background: #b91c1c; }
+
+.ed-error { color: #dc2626; margin: 0; }
+.ed-message { text-align: center; padding: 48px 16px; color: #475569; }
