@@ -108,31 +108,34 @@
   font-size: 15px;
 }
 
-/* Event and club placeholders */
-.events-placeholder,
-.clubs-placeholder {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 40px 20px;
+
+/* Homepage event and club cards */
+.home-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.home-cards-grid .event-card,
+.home-cards-grid .club-card {
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+}
+
+.home-explore-link {
   text-align: center;
-  box-shadow: var(--shadow);
+  margin-top: 30px;
 }
 
-.events-placeholder p,
-.clubs-placeholder p {
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-
-.events-placeholder a,
-.clubs-placeholder a {
+.home-explore-link a {
   color: #0D9488;
   font-weight: 600;
+  text-decoration: none;
 }
 
-.events-placeholder a:hover,
-.clubs-placeholder a:hover {
+.home-explore-link a:hover {
   color: var(--navy);
 }
 

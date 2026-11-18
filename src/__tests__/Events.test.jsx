@@ -10,9 +10,9 @@ const mockEvents = [
 ];
 
 beforeEach(() => {
-  global.fetch = vi.fn(() =>
+  vi.stubGlobal("fetch", vi.fn(() =>
     Promise.resolve({ ok: true, json: () => Promise.resolve(mockEvents) })
-  );
+  ));
 });
 
 const setup = () =>
