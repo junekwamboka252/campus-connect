@@ -1,5 +1,6 @@
-
 import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 import Home from './pages/Home'
 import Events from './pages/Events'
@@ -10,14 +11,20 @@ import ClubDetails from './pages/ClubDetails'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/events" element={<Events />} />
-      <Route path="/events/:id" element={<EventDetails />} />
-      <Route path="/create-event" element={<CreateEvent />} />
-      <Route path="/clubs" element={<Clubs />} />
-      <Route path="/clubs/:id" element={<ClubDetails />} />
-    </Routes>
+    <>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/:id" element={<EventDetails />} />
+        <Route path="/create-event" element={<CreateEvent />} />
+        <Route path="/clubs" element={<Clubs />} />
+        <Route path="/clubs/:id" element={<ClubDetails />} />
+      </Routes>
+
+      <Footer />
+    </>
   )
 }
 
