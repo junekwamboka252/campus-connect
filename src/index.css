@@ -1,20 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Brand colours */
+  --navy: #172554;
+  --blue: #2563EB;
+  --teal: #14B8A6;
+  --amber: #F59E0B;
+
+  /* Background colours */
+  --bg: #F8FAFC;
+  --white: #FFFFFF;
+
+  /* Text colours */
+  --text: #172033;
+  --text-muted: #64748B;
+
+  /* Borders and shadows */
+  --border: #E2E8F0;
+  --shadow: 0 4px 12px rgba(23, 37, 84, 0.08);
+
+  /* Fonts */
+  --sans: 'Inter', sans-serif;
+  --heading: 'Manrope', sans-serif;
+
+  font-family: var(--sans);
   line-height: 1.5;
   color-scheme: light;
-  color: #1e293b;
-  background-color: #f1f5f9;
+  color: var(--text);
+  background: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-family: var(--sans);
   background: linear-gradient(160deg, #eef2ff 0%, #f8fafc 50%, #e0f2fe 100%);
   background-attachment: fixed;
 }
 
 #root {
   width: 100%;
-  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--heading);
+  color: var(--navy);
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
