@@ -1,0 +1,98 @@
+
+.create-event-page {
+  flex: 1;
+  padding: 3rem 1.5rem;
+}
+
+.create-event-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.create-event-container h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.create-event-container > p {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.create-event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.create-event-form label {
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 0.5rem;
+}
+
+.create-event-form input,
+.create-event-form textarea {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: 1rem;
+}
+
+.create-event-form input:focus,
+.create-event-form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.create-event-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.create-event-form button {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--blue);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.create-event-form button:hover {
+  background: var(--navy);
+}
+
+.create-event-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: #dc2626;
+}
+
+.form-success {
+  color: #15803d;
+}
+
+@media (max-width: 600px) {
+  .create-event-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .create-event-container {
+    padding: 1.25rem;
+  }
+}
