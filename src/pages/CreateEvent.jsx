@@ -1,4 +1,4 @@
-
+import API_BASE_URL from "../services/api";
 import { useState } from "react";
 import "./CreateEvent.css";
 
@@ -63,7 +63,7 @@ function CreateEvent() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/events", {
+      const response = await fetch(`${API_BASE_URL}/events`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

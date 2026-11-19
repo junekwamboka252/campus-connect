@@ -1,3 +1,4 @@
+import API_BASE_URL from "../services/api";
 import { useEffect, useState } from 'react'
 import ClubCard from '../components/ClubCard'
 import './Clubs.css'
@@ -7,7 +8,7 @@ function Clubs() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:5000/clubs')
+ fetch(`${API_BASE_URL}/clubs`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch clubs')
