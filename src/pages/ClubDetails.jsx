@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './Clubs.css'
+import API_BASE_URL from "../services/api";
 function ClubDetails() {
   const { id } = useParams()
 
@@ -9,7 +10,7 @@ function ClubDetails() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    fetch(`http://localhost:5000/clubs/${id}`)
+    fetch(`${API_BASE_URL}/clubs/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Club not found')

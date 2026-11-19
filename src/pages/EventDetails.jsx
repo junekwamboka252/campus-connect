@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import API_BASE_URL from "../services/api";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import "./EventDetails.css";
 
-const API = "http://localhost:5000/events";
+const API = `${API_BASE_URL}/events`;
 
 function EventDetails() {
   const { id } = useParams();

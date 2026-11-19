@@ -1,4 +1,4 @@
-
+import API_BASE_URL from "../services/api";
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import EventCard from '../components/EventCard'
@@ -16,7 +16,7 @@ function Home() {
   const [clubsError, setClubsError] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:5000/events')
+    fetch(`${API_BASE_URL}/events`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to load events')
@@ -27,7 +27,7 @@ function Home() {
       .catch((error) => setEventsError(error.message))
       .finally(() => setEventsLoading(false))
 
-    fetch('http://localhost:5000/clubs')
+    fetch(`${API_BASE_URL}/clubs`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to load clubs')

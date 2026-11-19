@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import EventCard from "../components/EventCard";
 import SearchBar from "../components/SearchBar";
+import API_BASE_URL from "../services/api";
 import CategoryFilter from "../components/CategoryFilter";
 import "./Events.css";
 
-const API_URL = "http://localhost:5000/events";
+const API_URL = `${API_BASE_URL}/events`;
 
 export default function Events() {
   const [events, setEvents] = useState([]);
